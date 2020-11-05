@@ -9,16 +9,23 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SurfacePoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerResourses.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Surface.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomGenerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/SurfaceGenerator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RandomGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Surface.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SurfacePoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RandomGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Physics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResourses.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
       </list>
     </option>
   </component>

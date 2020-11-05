@@ -7,6 +7,8 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="PlayerMovement.cs" t="Include" />
+          <e p="PlayerResourses.cs" t="Include" />
           <e p="RandomGenerator.cs" t="Include" />
           <e p="Surface.cs" t="Include" />
           <e p="SurfacePoint.cs" t="Include" />
