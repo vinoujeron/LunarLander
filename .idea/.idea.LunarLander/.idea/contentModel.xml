@@ -11,6 +11,7 @@
           <e p="PlayerAnimationControl.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerResourses.cs" t="Include" />
+          <e p="PlayerResoursesObservable.cs" t="Include" />
           <e p="RandomGenerator.cs" t="Include" />
           <e p="Surface.cs" t="Include" />
           <e p="SurfacePoint.cs" t="Include" />

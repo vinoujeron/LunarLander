@@ -13,6 +13,14 @@ public class PlayerMovement : MonoBehaviour
     [Range(0f, -1000f)] [SerializeField] private float rotatePushPower = 10f;
     [SerializeField] private Rigidbody2D _rigidbody2D = null;
 
+    private PlayerResoursesObserver _playerResoursesObserver;
+    private bool _isNoFuel;
+    private void Start()
+    {
+        _playerResoursesObserver = new PlayerResoursesObserver(playerResourses.playerResoursesObservable);
+        _playerResoursesObserver.SetOnUpdateAction(() => { _isNoFuel = !_isNoFuel; });
+    }
+
     private void Update()
     {
         ManageInput();
@@ -20,12 +28,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void ManageInput()
     {
-        if (Input.GetKey(KeyCode.Space) && playerResourses.IsFuelLeft())
+        if (Input.GetKey(KeyCode.Space) && !_isNoFuel)
             ApplyThrust(thrustPower);
     }
     private void FixedUpdate()
     {
-        ApplyRotationBoost(Input.GetAxis("Horizontal"));
+        if (_isNoFuel)
+            return;
+        
+        ApplyRotationBoost(Input.GetAxis("Horizontal") );
     }
 
     private void ApplyThrust(float _thrustPower)
@@ -36,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void ApplyRotationBoost(float inputAxis)
     {
+        playerResourses.ConsumeFuelFixedDelta();
         _rigidbody2D.AddForce(new Vector2(inputAxis * rotatePushPower, 0f));
         rotationObjectTransform.rotation = Quaternion.Euler(0f, 0f, inputAxis * maxRotationAngle);
     }

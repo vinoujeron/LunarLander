@@ -11,6 +11,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SurfacePoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerResourses.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Surface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerResoursesObservable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerAnimationControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -23,14 +24,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SurfacePoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RandomGenerator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Physics.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResourses.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerAnimationControll.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerAnimationControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Surface.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResoursesObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResourses.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimationControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResoursesObservable.cs" />
       </list>
     </option>
   </component>
@@ -52,10 +55,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="13748">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="13748" />
       <method v="2" />
     </configuration>
   </component>
@@ -66,5 +69,80 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1604357858802" />
+    <state width="1877" height="72" key="GridCell.Tab.0.bottom" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.0.center" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.0.left" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.0.right" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.1.bottom" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.1.center" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.1.left" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.1.right" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.2.bottom" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.2.center" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.2.left" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.2.right" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.3.bottom" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.3.center" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.3.left" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state width="1877" height="72" key="GridCell.Tab.3.right" timestamp="1604953466421">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="72" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604953466421" />
+    <state x="783" y="220" key="RiderGenerateDialog" timestamp="1604946824756">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="783" y="220" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604946824756" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="playerResoursesObservable" language="C#" custom="RiderImportsList:" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
