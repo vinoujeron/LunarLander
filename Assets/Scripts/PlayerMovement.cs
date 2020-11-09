@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerResourses playerResourses = null;
+    [SerializeField] private Transform rotationObjectTransform = null;
     
     [Header("Lander settings")]
     [Range(0f, 180f)] [SerializeField] private float maxRotationAngle = 15f;
@@ -36,6 +37,6 @@ public class PlayerMovement : MonoBehaviour
     private void ApplyRotationBoost(float inputAxis)
     {
         _rigidbody2D.AddForce(new Vector2(inputAxis * rotatePushPower, 0f));
-        transform.rotation = Quaternion.Euler(0f, 0f, inputAxis * maxRotationAngle);
+        rotationObjectTransform.rotation = Quaternion.Euler(0f, 0f, inputAxis * maxRotationAngle);
     }
 }
