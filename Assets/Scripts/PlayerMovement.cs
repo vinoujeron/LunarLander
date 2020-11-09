@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Lander settings")]
     [Range(0f, 180f)] [SerializeField] private float maxRotationAngle = 15f;
     [Range(0f, 1000f)] [SerializeField] private float thrustPower = 10f;
-    [Range(0f, 1000f)] [SerializeField] private float rotatePushPower = 10f;
+    [Range(0f, -1000f)] [SerializeField] private float rotatePushPower = 10f;
     [SerializeField] private Rigidbody2D _rigidbody2D = null;
 
     private void Update()
