@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerResourses playerResourses = null;
-    [SerializeField] private Transform rotationObjectTransform = null;
     
     [Header("Lander settings")]
-    [Range(0f, 180f)] [SerializeField] private float maxRotationAngle = 15f;
+    [Range(0f, 180f)] [SerializeField] private float rotationPower = 0f;
     [Range(0f, 1000f)] [SerializeField] private float thrustPower = 10f;
     [Range(0f, -1000f)] [SerializeField] private float rotatePushPower = 10f;
     [SerializeField] private Rigidbody2D _rigidbody2D = null;
@@ -53,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     private void ApplyRotationBoost(float inputAxis)
     {
         playerResourses.ConsumeFuelFixedDelta();
-        _rigidbody2D.AddForce(new Vector2(inputAxis * rotatePushPower, 0f));
-        rotationObjectTransform.rotation = Quaternion.Euler(0f, 0f, inputAxis * maxRotationAngle);
+        _rigidbody2D.AddRelativeForce(new Vector2(inputAxis * rotatePushPower, 0f));
+        _rigidbody2D.AddTorque(inputAxis * rotationPower);
     }
 }

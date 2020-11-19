@@ -346,10 +346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerResourses: {fileID: 173680701}
-  rotationObjectTransform: {fileID: 173680697}
-  maxRotationAngle: 15
+  rotationPower: 1
   thrustPower: 10
-  rotatePushPower: -25
+  rotatePushPower: -5
   _rigidbody2D: {fileID: 173680700}
 --- !u!60 &173680699
 PolygonCollider2D:
@@ -1077,8 +1076,8 @@ MonoBehaviour:
   deltaXRight: 6
   deltaYTop: 0
   deltaYDown: 6
-  startSurfaceXLeft: -250
-  startSurfaceXRight: 250
+  startSurfaceXLeft: -2500
+  startSurfaceXRight: 2500
   lineWidth: 0.2
   lineRenderer: {fileID: 1185969899}
   edgeCollider2D: {fileID: 1185969900}
