@@ -15,11 +15,14 @@ public class PlayerAnimationControl : MonoBehaviour
     {
         _playerResoursesObserver = new PlayerResoursesObserver(playerResourses.playerResoursesObservable);  
         _playerResoursesObserver.SetOnUpdateAction(() => 
-        { 
-            leftSprite.SetActive(false);
-            rightSprite.SetActive(false);
-            upSprite.SetActive(false);
-            _isNoFuel = !_isNoFuel;
+        {
+            if (_playerResoursesObserver.obsorvableValue <= 0)
+            {
+                leftSprite.SetActive(false);
+                rightSprite.SetActive(false);
+                upSprite.SetActive(false);
+                _isNoFuel = true;
+            }
         });
     }
 

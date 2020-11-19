@@ -10,7 +10,7 @@ public class PlayerResourses : MonoBehaviour
 
     private void Awake()
     {
-        playerResoursesObservable = new PlayerResoursesObservable();
+        playerResoursesObservable = new PlayerResoursesObservable(fuelCapacity);
     }
 
     public void ConsumeFuel()
@@ -18,14 +18,18 @@ public class PlayerResourses : MonoBehaviour
         if (fuelCapacity - fuelConsumptionPerSecond * Time.deltaTime >= 0)
             fuelCapacity -= fuelConsumptionPerSecond * Time.deltaTime;
         else
-            playerResoursesObservable.Update();
+            fuelCapacity = 0;
+
+        playerResoursesObservable.Update(fuelCapacity);
     }
 
     public void ConsumeFuelFixedDelta()
     {
-        if (fuelCapacity - fuelConsumptionPerSecond * Time.fixedDeltaTime >= 0) 
+        if (fuelCapacity - fuelConsumptionPerSecond * Time.fixedDeltaTime >= 0)
             fuelCapacity -= fuelConsumptionPerSecond * Time.fixedDeltaTime;
         else
-            playerResoursesObservable.Update();
+            fuelCapacity = 0;
+
+        playerResoursesObservable.Update(fuelCapacity);
     }
 }

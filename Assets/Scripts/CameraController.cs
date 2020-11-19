@@ -3,7 +3,7 @@
 public class CameraController : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform playerTransform = null;
+    [SerializeField] private Transform followObjectTransform = null;
     [SerializeField] private Camera mainCamera = null;
 
     [Header("Offset")]
@@ -12,8 +12,13 @@ public class CameraController : MonoBehaviour
     
     private void Update()
     {
-        Vector3 position = playerTransform.position;
-        mainCamera.transform.position = 
+        SetCameraPosition(followObjectTransform.position);
+    }
+
+    private void SetCameraPosition(Vector3 newPosition)
+    {
+        Vector3 position = newPosition;
+        mainCamera.transform.position =
             new Vector3((position.x + xOffset), (position.y + yOffset), -10f);
     }
 }

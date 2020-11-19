@@ -18,7 +18,10 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         _playerResoursesObserver = new PlayerResoursesObserver(playerResourses.playerResoursesObservable);
-        _playerResoursesObserver.SetOnUpdateAction(() => { _isNoFuel = !_isNoFuel; });
+        _playerResoursesObserver.SetOnUpdateAction(() => {
+            if (_playerResoursesObserver.obsorvableValue <= 0)
+                _isNoFuel = true;
+        });
     }
 
     private void Update()
@@ -35,8 +38,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_isNoFuel)
             return;
-        
-        ApplyRotationBoost(Input.GetAxis("Horizontal") );
+
+        float horizontal = Input.GetAxis("Horizontal");
+        if (Math.Abs(horizontal) > 0)
+            ApplyRotationBoost(horizontal);
     }
 
     private void ApplyThrust(float _thrustPower)

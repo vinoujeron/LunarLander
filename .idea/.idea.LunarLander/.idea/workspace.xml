@@ -31,9 +31,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResoursesObserver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResourses.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerAnimationControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResoursesObservable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerResourses.cs" />
       </list>
     </option>
   </component>
