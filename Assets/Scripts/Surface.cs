@@ -25,6 +25,12 @@ public class Surface : MonoBehaviour
     [SerializeField] private EdgeCollider2D edgeCollider2D = null;
     private List<SurfacePoint> _generatedPoints = new List<SurfacePoint>();
     
+    public void CreateSurface()
+    {
+        GeneratePoints(startSurfaceXLeft, startSurfaceXRight);
+        GenerateSurface();
+    }
+
     private void GenerateSurface()
     {
         List<Vector2> points = new List<Vector2>();
@@ -42,6 +48,9 @@ public class Surface : MonoBehaviour
 
     private void GeneratePoints(float leftEndX, float rightEndX)
     {
+        // Clear previous points
+        _generatedPoints.Clear();
+
         // Start with generating leftMostPoint
         SurfacePoint newPoint = new SurfacePoint(leftEndX, Random.Range(deltaYDown, deltaYTop));
         _generatedPoints.Add(newPoint);
@@ -59,11 +68,6 @@ public class Surface : MonoBehaviour
         }
     } 
     
-    private void Start()
-    {
-        GeneratePoints(startSurfaceXLeft, startSurfaceXRight);
-        GenerateSurface();
-    }
 
     // private void OnValidate()
     // {

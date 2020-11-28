@@ -2,6 +2,8 @@
 
 public class PlayerAnimationControl : MonoBehaviour
 {
+    [Header("Dependencies")]
+    [SerializeField] private WinLogic winLogic = null;
     [SerializeField] private PlayerResourses playerResourses = null;
     
     [Header("Sprites")]
@@ -10,7 +12,9 @@ public class PlayerAnimationControl : MonoBehaviour
     [SerializeField] private GameObject rightSprite = null;
 
     private PlayerResoursesObserver _playerResoursesObserver;
-    private bool _isNoFuel = false;
+    private WinObserver _winObserver;
+    private bool _enabled = true;
+
     private void Start()
     {
         _playerResoursesObserver = new PlayerResoursesObserver(playerResourses.playerResoursesObservable);  
@@ -21,8 +25,32 @@ public class PlayerAnimationControl : MonoBehaviour
                 leftSprite.SetActive(false);
                 rightSprite.SetActive(false);
                 upSprite.SetActive(false);
-                _isNoFuel = true;
+                _enabled = false;
             }
+        });
+
+        _winObserver = new WinObserver(winLogic);
+        _winObserver.SetOnUpdateAction(() =>
+        {
+            var state = winLogic.gameState;
+            if (state == WinLogic.GameState.LOST
+            || state == WinLogic.GameState.WON
+            || state == WinLogic.GameState.LANDING)
+            {
+                leftSprite.SetActive(false);
+                rightSprite.SetActive(false);
+                upSprite.SetActive(false);
+                _enabled = false;
+            }
+            else if (state == WinLogic.GameState.PLAY)
+            {
+                leftSprite.SetActive(false);
+                rightSprite.SetActive(false);
+                upSprite.SetActive(false);
+                _enabled = true;
+            }
+            else
+                _enabled = true;
         });
     }
 
@@ -33,7 +61,7 @@ public class PlayerAnimationControl : MonoBehaviour
 
     private void HandleInput()
     {
-        if (_isNoFuel)
+        if (!_enabled)
             return;
         
         if (Input.GetKeyUp(KeyCode.A))

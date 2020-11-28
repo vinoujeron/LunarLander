@@ -4,14 +4,17 @@ using UnityEngine.UI;
 
 public class TimeCounter : MonoBehaviour
 {
+    public bool pause;
     [SerializeField] private Text timeText = null;
 
-    private bool _started;
     private float _timeInSeconds = 0;
     
 
     private void Update()
     {
+        if (pause)
+            return;
+
         CountTime();
         SetTimeInText(ref timeText);
     }
@@ -21,9 +24,15 @@ public class TimeCounter : MonoBehaviour
         StartCounting();
     }
 
+    public void Reset()
+    {
+        _timeInSeconds = 0;
+        pause = false;
+    }
+
     public void StartCounting()
     {
-        _started = true;
+        pause = false;
     }
 
     public void SetTimeInText(ref Text text)
@@ -37,7 +46,7 @@ public class TimeCounter : MonoBehaviour
         
     private void CountTime()
     {
-        if (_started)
+        if (!pause)
             _timeInSeconds += Time.deltaTime;
     }
 
