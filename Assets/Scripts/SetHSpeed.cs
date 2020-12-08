@@ -19,9 +19,9 @@ public class SetHSpeed : MonoBehaviour
     private void Update()
     {
         float v = rb.velocity.x;
-        if (v > 0 && !arrow.activeSelf)
+        if (Mathf.Abs(v) > 0 && !arrow.activeSelf)
             arrow.SetActive(true);
-        else if (v == 0 & arrow.activeSelf)
+        else if (v == 0 && arrow.activeSelf)
             arrow.SetActive(false);
         else if (v > 0.1f)
             arrow.transform.localScale = _rightArrowScale;

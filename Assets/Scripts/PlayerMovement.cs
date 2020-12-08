@@ -38,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody2D.angularVelocity = 0f;
     }
 
+    public Vector3 GetDeltaSpeed()
+    {
+        return _rigidbody2D.velocity;
+    }
+
     private void Start()
     {
         _playerResoursesObserver = new PlayerResoursesObserver(playerResourses.playerResoursesObservable);

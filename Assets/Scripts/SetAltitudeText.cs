@@ -3,15 +3,15 @@ using UnityEngine.UI;
 
 public class SetAltitudeText : MonoBehaviour
 {
-    [SerializeField] private Transform t_player = null;
+    [SerializeField] private Transform playerTransform = null;
     [SerializeField] private LayerMask groundLayer = 0;
     [SerializeField] private Text altitudeInfo = null;
-    private CalculateDistance distanceCalculator;
+    private DistanceCalculator distanceCalculator;
     private bool _isOnPause;
 
     private void Start()
     {
-        distanceCalculator = new CalculateDistance(t_player, groundLayer);
+        distanceCalculator = new DistanceCalculator(playerTransform, groundLayer);
     }
 
     private void Update()
